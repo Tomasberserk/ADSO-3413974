@@ -1,5 +1,3 @@
-# ADSO-3413974
-ADSO-3413974
 <!--
 CONFIG
 FULL_NAME: Tomas Barera Ortiz
