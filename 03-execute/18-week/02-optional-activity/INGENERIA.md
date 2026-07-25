@@ -1,3 +1,8 @@
+# Ingeniería Inversa y Reglas de Negocio en el Entorno Académico
+Este documento presenta el análisis técnico y conceptual del funcionamiento interno del sistema de asistencia (`app-attendance`), detallando las reglas de negocio aplicadas al control de presencia y estableciendo una metodología de diseño centrado en el usuario (Design Thinking) para la reconstrucción de la experiencia desde la fase de planificación en papel.
+---
+## 1. Análisis de Reglas de Negocio y Lógica Conceptual
+Para dar respuesta a los escenarios cotidianos descritos en el inventario funcional, el backend de la aplicación implementa reglas operativas para asegurar el control de asistencia y evitar la suplantación de identidad.
 ### A. Algoritmo de Puntualidad y Asistencia Fraccionada
 La asistencia no es evaluada como una variable binaria (Presente/Ausente), sino que se implementa un modelo de cálculo proporcional según el tiempo transcurrido desde el inicio de la clase:
 * **Margen de Tolerancia Inicial:** Se otorga una tolerancia de 15 minutos desde el inicio de la sesión activa (`activated_at`). Las marcaciones efectuadas en este rango validan las **6 horas completas** de la clase (Estado: `REGULAR`).
