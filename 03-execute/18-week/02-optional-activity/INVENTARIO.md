@@ -1,3 +1,12 @@
+# Ingeniería Inversa y Reglas de Negocio en el Aula
+Este documento explica cómo funciona "por detrás" la lógica del sistema de asistencia para dar respuesta a los escenarios cotidianos de la clase, y propone una guía conceptual para rediseñar la experiencia del usuario (UX) partiendo desde el papel.
+---
+## 1. Reglas de Negocio y Lógica Conceptual
+Para que los casos de uso descritos en el inventario funcionen, el servidor procesa y evalúa constantemente una serie de reglas lógicas basadas en el comportamiento de los estudiantes:
+### A. La Regla de la Puntualidad (Retraso Fraccionado)
+* **El Problema:** La asistencia tradicional es binaria (vino o no vino). Pero en la formación técnica (ej. clases de 6 horas), un alumno que llega 1 hora tarde no debería perder todo el día, pero tampoco registrar 6 horas completas.
+* **La Lógica del Sistema:** Al activarse la sesión, se fija una hora de inicio.
+  - Si el estudiante registra su ingreso entre el minuto 0 y el 15, el sistema le otorga el 100% de las horas (6 horas asistidas, 0 de falla).
   - A partir del minuto 16, cada hora de retraso o fracción representa la pérdida de un "bloque" completo. El servidor calcula la diferencia de minutos, descuenta las horas y actualiza su estado a "Asistencia Parcial".
 ### B. El Mecanismo Anti-Fraude (Código Dinámico e IP)
 * **El Problema:** La "viveza criolla" de compartir capturas de pantalla del QR por redes sociales para registrarse sin estar en el salón.
