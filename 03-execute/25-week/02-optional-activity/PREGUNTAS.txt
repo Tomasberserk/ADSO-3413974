@@ -1,0 +1,14 @@
+
+
+1.como aislara los taxes de los combos para no cruzar descuentos con las unidades individuales?
+
+2. como se refleja el cupo de un cliente de acuerdo a su consumo? existe cupo mínimo? acorde a que cantidad de consumo de un cliente se le otorga cupo?
+
+3.asigna un producto en especifico y lo trata como obsequio? estas unidades gratuitas son descontadas de un sku definido para ser obsequio? o como se define que sku destinaran para obsequiar?
+
+4. la compra de varios combos incluye obsequio? o solo se aisla para compras individuales?
+
+5.los taxes de los combos están sujetos a n cantidad de productos? 
+
+
+
