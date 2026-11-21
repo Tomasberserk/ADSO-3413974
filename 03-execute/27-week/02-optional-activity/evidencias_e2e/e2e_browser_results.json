@@ -1,0 +1,40 @@
+{
+  "executedAt": "2026-11-21 17:35:53",
+  "baseUrl": "http://127.0.0.1:4319",
+  "browser": "Google Chrome (Playwright Headless)",
+  "total": 5,
+  "passed": 5,
+  "failed": 0,
+  "pageErrors": [],
+  "tests": [
+    {
+      "id": "E2E-UI-01",
+      "name": "Portal Unificado SENA, logo oficial y 0 credenciales demo",
+      "status": "PASS"
+    },
+    {
+      "id": "E2E-UI-02",
+      "name": "Rechazo 401 con mensaje accesible en #loginFeedback",
+      "status": "PASS",
+      "detail": "Credenciales inválidas."
+    },
+    {
+      "id": "E2E-UI-03",
+      "name": "Login unificado de Instructor y carga de tablero docente",
+      "status": "PASS",
+      "role": "INSTRUCTOR"
+    },
+    {
+      "id": "E2E-UI-04",
+      "name": "Login unificado de Aprendiz (Tomás Berserk) y estado de aula",
+      "status": "PASS",
+      "role": "APRENDIZ"
+    },
+    {
+      "id": "E2E-UI-05",
+      "name": "Cierre de sesión limpio y 0 excepciones JS no controladas",
+      "status": "PASS",
+      "pageErrors": 0
+    }
+  ]
+}

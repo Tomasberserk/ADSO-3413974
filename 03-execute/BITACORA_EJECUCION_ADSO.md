@@ -23,20 +23,20 @@
 | **Semana 11** | Sustentación Ejecutiva de Proyecto | Presentación del SRS del proyecto formativo | Memoria descriptiva e infografía ejecutiva |
 | **Semana 12** | Arquitectura TIC y Prototipo Base | Arquitectura multicapa desacoplada y contenedores | Prototipo fullstack funcional y retrospectiva técnica |
 | **Semana 13** | Análisis de Gestión de Horarios | Asignación de ambientes, instructores y fichas | Blueprint operativo, esquemas base y memoria de necesidades |
-| **Semana 14** | Acoplamiento Arquitectural | Adaptación de la gestión de horarios al proyecto formativo | Especificación y articulación metodológica de requerimientos |
+| **Semana 14** | Acoplamiento Arquitectural (Inventario Inteligente) | Normativa (≤ 2 págs.), presentación y mockup de baja fidelidad | `Normativa_Proyecto_Inventario_Inteligente.docx`, `.pptx` y mockup `.pdf` |
 | **Semana 15** | Modelado UML y Casos de Uso | Notación UML y especificación de casos de uso | Diagramas de casos de uso, fichas técnicas y marco normativo |
 | **Semana 16** | Requerimientos de Control de Asistencia | Levantamiento de necesidades de asistencia en aula | Entrevistas, catálogo RF/RNF y diagramas de clases y casos de uso |
 | **Semana 17** | Prototipado UI/UX y Hoja de Ruta | Mockups de interfaz y hoja de ruta técnica fase 1 | Prototipos visuales navegables, especificación técnica y presentación |
 | **Semana 18** | Metodología MoSCoW y Reglas Antifraude | Reglas de negocio, Design Thinking y despliegue web | Matriz MoSCoW, análisis antifraude y aplicativo desplegado en producción |
-| **Semana 19** | Transición a Modelado Relacional | Normalización y diseño de esquemas para bases de datos | Estructuración de requerimientos de persistencia |
+| **Semana 19** | Socialización del MVP (SENA Attendance) | Presentación funcional del MVP desplegado en producción | Registro del MVP y enlace productivo en Vercel (`MVP_Asistencia_SENA.md`) |
 | **Semana 20** | Bases de Datos Avanzadas y Migraciones | Migraciones SQL estructuradas y pruebas de esquema | Suite de migraciones relacionales, tests automatizados y landing interactiva |
 | **Semana 21** | Auditoría UX/UI contra Marco Institucional | Auditoría de 53 pantallas vs. manuales institucionales | Documento de auditoría técnica y modelos entidad-relación |
 | **Semana 22** | Modelado BPMN 2.0 y Arquitectura Global | Flujos BPMN por roles y arquitectura de datos global | Conjunto de 11 diagramas de procesos BPMN y modelos de datos lógicos |
-| **Semana 23** | Estrategia de Pensamiento y Contingencia | Ingeniería inversa, plan de contingencia y gestión de horarios | Documentación estratégica y plan de contingencia *(pendiente de carga)* |
+| **Semana 23** | Estrategia de Pensamiento y Contingencia | Design Thinking, Gestión del Conocimiento, Ing. Inversa, MoSCoW y Contingencia | 5 infografías técnicas (`.png`) e informe `Informe_SENA_Attendance.md` |
 | **Semana 24** | Sistema Fullstack Integral Empresarial | Gobernanza y plataforma integral para taller automotriz | Sistema completo: gobernanza, frontend modular, backend relacional y Docker |
 | **Semana 25** | Análisis de Reglas de Negocio (17-10-2026) | Levantamiento de dudas críticas (combos, impuestos y cupos) | Documento de preguntas técnicas y documentación de sesión |
 | **Semana 26** | Evaluación de Proyectos y Síntesis (07-11-2026) | Retroalimentación de proyectos evaluados y apuntes de clase | Escaneo consolidado de apuntes y resumen técnico (`CamScanner`) |
-| **Semana 27** | Pruebas y Flujos E2E (*End-to-End*) (21-11-2026) | Integración y validación punta a punta (*End-to-End*) | Archivos, diapositivas y evidencias E2E *(pendiente de carga)* |
+| **Semana 27** | Pruebas y Flujos E2E (*End-to-End*) (21-11-2026) | Pruebas E2E API (10/10) + Chrome Playwright (5/5) + Auditoría (19/19) | Informe E2E, scripts ejecutables, capturas reales y presentación `.pptx` |
 
 ---
 
@@ -279,7 +279,7 @@
 * **Actividades Realizadas:** 
   - Análisis de escenarios de riesgo operativo y diseño de planes de contingencia para el sistema de gestión de horarios.
   - Ejercicio de pensamiento estructurado e ingeniería inversa sobre flujos institucionales.
-* **Productos y Resultados de la Sesión:** Evidencias de estrategia de pensamiento, ingeniería inversa y plan de contingencia *(pendiente de carga en `23-week/02-optional-activity/`)*.
+* **Productos y Resultados de la Sesión:** 5 infografías visuales (`Infografia_01_Design_Thinking.png` a `Infografia_05_Plan_de_Contingencia.png`) e informe técnico consolidado (`Informe_SENA_Attendance.md`).
 
 ---
 
@@ -323,7 +323,7 @@
 * **Objetivo:** Validar flujos completos de extremo a extremo (*End-to-End*) integrando los componentes del sistema y documentando los resultados.
 * **Actividades Realizadas:** 
   - Actualización del cronograma general hasta la semana 27 y preparación de material de presentación y trabajo E2E.
-* **Productos y Resultados de la Sesión:** Archivos, diapositivas y evidencias de trabajo E2E *(pendiente de carga en `27-week/02-optional-activity/`)*.
+* **Productos y Resultados de la Sesión:** Informe técnico E2E (`Informe_Pruebas_E2E_SENA_Attendance.md`), presentación ejecutiva (`Presentacion_Pruebas_E2E_SENA_Attendance.pptx`), scripts ejecutables (`e2e_browser_sena_attendance.py`, `e2e-discovery.test.js`) y evidencias reales de ejecución en Google Chrome (`evidencias_e2e/`).
 
 ---
 
