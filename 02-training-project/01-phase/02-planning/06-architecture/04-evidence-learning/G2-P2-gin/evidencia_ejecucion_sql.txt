@@ -1,0 +1,17 @@
+========================================================================
+EVIDENCIA DE EJECUCION REAL DEL SCRIPT DDL — GESTION NEIVA (GIN)
+Motor SQL : SQLite 3.45.3 (PRAGMA foreign_keys = ON)
+Fecha     : 2026-11-26 00:15:42
+Script    : schema_gin.sql
+========================================================================
+
+[OK] DDL ejecutado sin errores. Tablas creadas (10): alerta_inventario, categoria, cierre_caja, detalle_venta, lote, producto, rol, tienda, usuario, venta
+[OK] Indices de rendimiento creados (4): idx_alerta_tienda_estado, idx_lote_vencimiento, idx_producto_tienda_nombre, idx_venta_tienda_fecha
+
+[OK] Insercion de registros de prueba en las 10 tablas completada sin errores.
+[OK] Consulta JOIN verificada: Tienda='Tienda La Economia Neiva' | Cajero='Cajero Demo Turno1' (CAJERO) | Total=10900 | Lineas=2
+[OK] Prueba CHECK exitosa (precio negativo rechazado): CHECK constraint failed: ck_producto_venta
+[OK] Prueba ON DELETE RESTRICT exitosa (producto vendido protegido): FOREIGN KEY constraint failed
+[OK] Prueba ON DELETE SET NULL exitosa (producto.id_categoria tras borrar categoria = None)
+
+RESULTADO FINAL: 10/10 TABLAS CREADAS, RESTRICCIONES PK/FK/UNIQUE/CHECK/ON DELETE VERIFICADAS SIN ERRORES.

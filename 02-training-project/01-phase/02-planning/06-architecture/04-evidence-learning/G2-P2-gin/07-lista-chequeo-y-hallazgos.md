@@ -1,0 +1,48 @@
+# B7 · Lista de Chequeo de Verificación del Diseño y Registro de Hallazgos — GIN (TiendApp)
+
+**Producto:** G2-P2 · Modelo de datos y verificación  
+**Autor (GitHub):** `@Tomasberserk`  
+**Alcance:** **24 criterios de aceptación medibles** (mínimo exigido: 20), agrupados por artefacto con severidad (`Crítico`, `Mayor`, `Menor`), aplicados sobre **ambos productos (`G2-P1-gin` y `G2-P2-gin`)**, más **5 hallazgos registrados y corregidos** (mínimo exigido: 3).
+
+---
+
+## 1. Lista de Chequeo Diligenciada sobre `G2-P1-gin` y `G2-P2-gin` (24 Criterios)
+
+| ID | Artefacto | Criterio de aceptación (medible) | Severidad | Rev. 1 | Evidencia verificable | Hallazgo | Rev. 2 |
+| :-: | :--- | :--- | :---: | :-: | :--- | :-: | :-: |
+| **LC-01** | Ficha (`A1`) | Incluye ≥ 8 RF y ≥ 3 RNF con ID exacto del SRS y justifica lenguaje OO y tipo de BD con ≥ 3 condiciones del caso. | Mayor | Sí | `G2-P1-gin/01-ficha-interpretacion-plataforma.md`: 10 RF, 5 RNF, 3 condiciones Python/FastAPI y 3 PostgreSQL. | — | Sí |
+| **LC-02** | Clases (`A2`) | El diagrama contiene ≥ 8 clases con atributos tipados, visibilidad (`-`/`+`/`#`) y métodos con parámetros y retorno. | Crítico | Sí | `G2-P1-gin/02-diagrama-clases.drawio`/`.png`: 14 clases + 1 interfaz, 100 % tipadas. | — | Sí |
+| **LC-03** | Clases (`A2`) | Todas las asociaciones presentan multiplicidad explícita en ambos extremos. | Menor | Sí | Todas las relaciones en `02-diagrama-clases.png` muestran multiplicidad (`1`, `0..*`, `1..*`, `0..1`). | — | Sí |
+| **LC-04** | Clases (`A2`) | Incluye ≥ 1 composición o agregación y ≥ 1 herencia o interfaz con ≥ 2 implementaciones usadas con criterio. | Crítico | Sí | Composición `Venta`◆──`LineaVenta` y `Producto`◆──`Lote`; herencia `Usuario`→`Tendero`/`Cajero`; interfaz `IEstrategiaPago` con 2 implementaciones. | — | Sí |
+| **LC-05** | Clases (`A2`) | Ninguna clase mezcla responsabilidades de áreas distintas (UI, negocio, persistencia, cobro, notificaciones, reportes). | Mayor | **No** | En borrador inicial `Venta` incluía lógica de envío de alertas y generación de reportes de cierre. | **H-01** | **Sí** |
+| **LC-06** | Clases (`A2`) | El 100 % de las clases e interfaces trazan a ≥ 1 requisito en la matriz `A7` (0 clases huérfanas). | Mayor | Sí | `G2-P1-gin/06-matriz-trazabilidad.md` Sec. 2: 15/15 clases trazadas. | — | Sí |
+| **LC-07** | Patrones (`A3`) | Se aplican ≥ 2 patrones GoF distintos en el diagrama (≥ 1 distinto de Singleton) con problema, clases y mantenibilidad. | Crítico | Sí | `Strategy` (`IEstrategiaPago`) y `Facade` (`FachadaPOS`) visibles en `02-diagrama-clases.png` y Sec. 4 del `.md`. | — | Sí |
+| **LC-08** | Arquitectura (`A4`) | Define estilo arquitectónico con diagrama, estilo de comunicación, tabla de ≥ 3 RNF → decisión y alternativa descartada. | Mayor | Sí | `G2-P1-gin/03-arquitectura-software.md`: 3 capas, REST/JSON + SQL, 5 RNF y 5 alternativas descartadas. | — | Sí |
+| **LC-09** | Arquitectura (`A4`) | No existen saltos de capa (Capa de Presentación nunca accede directamente a Persistencia/BD). | Crítico | Sí | `03-arquitectura.png` y `04-vista-componentes.png`: `WebApp` solo llama a servicios de Capa 2. | — | Sí |
+| **LC-10** | Componentes (`A5`) | Incluye ≥ 5 componentes con interfaces provistas y requeridas nombradas, dependencias correctas y mapeo a clases/RF. | Mayor | **No** | En borrador inicial la flecha entre `POS` y `Catálogo` carecía del nombre de la interfaz `IGestorStock`. | **H-02** | **Sí** |
+| **LC-11** | Despliegue (`A6`) | Incluye ≥ 3 nodos con artefactos alojados, protocolo/puerto en cada enlace y ≥ 1 decisión ligada a un RNF. | Mayor | Sí | `G2-P1-gin/05-vista-despliegue.png`: 4 nodos + almacenamiento respaldo, `HTTPS 443`, `HTTP 8000`, `TCP 5432`, 4 decisiones RNF. | — | Sí |
+| **LC-12** | Trazabilidad (`A7`) | Matriz bidireccional cubre 100 % de los RF (`RF-01`..`RF-10`) sin clases ni tablas huérfanas, con fuente editable + PNG por diagrama. | Crítico | Sí | `06-matriz-trazabilidad.md` (10/10 RF) y 4 pares `.drawio`/`.png` en `G2-P1-gin/`. | — | Sí |
+| **LC-13** | Conceptual (`B1`) | Modelo conceptual tiene ≥ 6 entidades con atributos e ID, verbos, cardinalidad mín/máx, ≥ 1 N:M y ≥ 1 1:N, justificando BD. | Crítico | Sí | `G2-P2-gin/01-modelo-conceptual-ajustado.md`/`.png`: 10 entidades, 11 relaciones con verbo y cardinalidad. | — | Sí |
+| **LC-14** | Lógico (`B2`) | Modelo lógico tiene ≥ 8 tablas con PK/FK, tabla intermedia N:M (`detalle_venta`) y cuadro explícito de reglas de transformación. | Crítico | Sí | `G2-P2-gin/02-modelo-logico-relacional.md`/`.png`: 10 tablas, 7 reglas documentadas. | — | Sí |
+| **LC-15** | Normalización (`B3`) | Evidencia paso a paso `0FN→1FN→2FN→3FN` de ≥ 2 tablas propias (1 llave compuesta 2FN, 1 transitiva 3FN) con DF escritas. | Crítico | **No** | En borrador inicial `usuario.rol` seguía como texto sin tabla `rol`, dejando una dependencia transitiva sin resolver. | **H-03** | **Sí** |
+| **LC-16** | Normalización (`B3`) | Cualquier desnormalización intencional queda explícitamente declarada y justificada. | Menor | Sí | `03-normalizacion-0fn-a-3fn.md` declara y justifica `precio_unitario_congelado` y `venta.total`. | — | Sí |
+| **LC-17** | Diccionario (`B4`) | Declara estándar de nombrado y documenta 100 % de tablas/columnas con tipo, tamaño, restricciones y dominio. | Mayor | Sí | `04-diccionario-de-datos.md`: 10 tablas, 67 columnas, estándar `snake_case` singular. | — | Sí |
+| **LC-18** | SQL (`B5`) | Script crea 100 % de las tablas con PK, FK, `NOT NULL`, `UNIQUE`, ≥ 3 `CHECK` y `ON DELETE` en ≥ 3 FK. | Crítico | Sí | `schema_gin.sql`: 10 tablas, 15 FK con `ON DELETE`, 20 `CHECK`, 4 `UNIQUE`. | — | Sí |
+| **LC-19** | SQL (`B5`) | Script ejecuta sin errores en un motor SQL real con evidencia adjunta y nombres/tipos 100 % idénticos al diccionario `B4`. | Crítico | **No** | En primera ejecución de prueba faltaba `PRAGMA foreign_keys = ON` y un `CHECK` sobre `cambio_entregado >= 0`. | **H-04** | **Sí** |
+| **LC-20** | Seguridad (`B6`) | Define ≥ 6 políticas concretas (≥ 2 Integridad, ≥ 2 Confidencialidad, ≥ 2 Disponibilidad) vinculadas a tablas del caso. | Crítico | Sí | `06-politicas-seguridad-datos.md`: 9 políticas (3 por principio) ligadas a tablas/columnas de GIN. | — | Sí |
+| **LC-21** | Seguridad (`B6`) | Contraseñas almacenadas con **hash y sal** (no cifradas) y comunicaciones protegidas por **TLS**. | Crítico | **No** | En borrador inicial `usuario` solo tenía `hash_contrasena` sin columna explícita `sal_contrasena` ni mención a `Argon2id`. | **H-05** | **Sí** |
+| **LC-22** | Seguridad (`B6`) | Incluye tratamiento de datos personales (finalidad y autorización) y matriz de ≥ 3 roles contra tablas. | Mayor | Sí | Política P6 (Ley 1581 + `autorizacion_datos`) y matriz de 4 roles × 10 tablas. | — | Sí |
+| **LC-23** | Seguridad (`B6`) | Incluye política de respaldos con frecuencia definida y prueba periódica de restauración verificable. | Mayor | Sí | Políticas P7 (`pg_dump` diario cifrado 3-2-1) y P8 (prueba mensual con acta, RTO/RPO). | — | Sí |
+| **LC-24** | Documentación | Ambos `README.md` (`G2-P1-gin` y `G2-P2-gin`) completos, sin datos personales reales (solo `@Tomasberserk`) y con IA declarada. | Mayor | Sí | `G2-P1-gin/README.md` y `G2-P2-gin/README.md` verificados contra `Plantilla_README_Entrega_G2.md`. | — | Sí |
+
+---
+
+## 2. Registro de Hallazgos Detectados y Corregidos (5 Hallazgos — mínimo exigido: 3)
+
+| ID | Artefacto | Descripción del hallazgo | Requisito afectado | Severidad | Corrección aplicada |
+| :-: | :--- | :--- | :---: | :---: | :--- |
+| **H-01** | Diagrama de clases (`A2`) | La clase `Venta` asumía inicialmente responsabilidades de notificación de stock y cálculo de cierre diario, violando alta cohesión (Regla 5 de `Rubricas_G2.md`). | Cohesión / `RF-06`, `RF-10` | **Mayor** | Se separaron responsabilidades en `AlertaInventario` (notificaciones), `CierreCaja` (reportes) y `FachadaPOS` (orquestación), dejando `Venta` enfocada únicamente en la transacción comercial. |
+| **H-02** | Vista de componentes (`A5`) | La dependencia entre `Punto de Venta (POS)` y `Catálogo y Lotes` mostraba una flecha sin especificar la interfaz requerida/provista. | `RF-05`, `A5` | **Mayor** | Se nombró explícitamente la interfaz `IGestorStock` provista por `Catálogo y Lotes` y requerida por `Punto de Venta (POS)`, tanto en el diagrama `.drawio`/`.png` como en la tabla `A5`. |
+| **H-03** | Modelo lógico y Normalización (`B2`, `B3`) | El campo `rol` como cadena repetida en `usuario` generaba dependencia transitiva (`id_usuario → rol → permisos`) y riesgo de valores inconsistentes. | `RF-07`, `RNF-04` | **Crítico** | Se creó la tabla catálogo `rol(id_rol, codigo_rol, descripcion)` con `FK id_rol` en `usuario` y se documentó el paso a 3FN en `03-normalizacion-0fn-a-3fn.md`. |
+| **H-04** | Script SQL y Diccionario (`B4`, `B5`) | Al probar el DDL inicial en SQLite no se tenía activado `PRAGMA foreign_keys = ON` ni la restricción `CHECK (cambio_entregado >= 0)` en `venta`. | `RF-08`, `B5` | **Crítico** | Se añadió `PRAGMA foreign_keys = ON`, se agregó `ck_venta_cambio`, se validó coincidencia exacta con `B4` y se ejecutó sin errores con pruebas de inserción y rechazo de `CHECK`. |
+| **H-05** | Modelo de datos y Seguridad (`B1`, `B4`, `B6`) | La tabla `usuario` solo contemplaba `hash_contrasena` sin columna explícita `sal_contrasena` ni bandera de autorización de tratamiento de datos personales. | `RNF-04`, Ley 1581 | **Crítico** | Se incorporaron las columnas `sal_contrasena VARCHAR(64) NOT NULL` y `autorizacion_datos INTEGER NOT NULL CHECK (IN 0,1)` en `B1`, `B2`, `B4`, `schema_gin.sql` y las políticas P4 y P6 de `B6`. |
