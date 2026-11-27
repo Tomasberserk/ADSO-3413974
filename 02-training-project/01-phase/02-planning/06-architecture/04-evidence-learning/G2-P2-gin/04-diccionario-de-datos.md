@@ -3,7 +3,7 @@
 **Producto:** G2-P2 · Modelo de datos y verificación  
 **Autor (GitHub):** `@Tomasberserk`  
 **Estándar de nombrado declarado:** nombres de tablas en **singular** y minúsculas (`snake_case`); columnas en `snake_case`; llaves primarias `id_<tabla>`; llaves foráneas con prefijo `id_`; restricciones nombradas `fk_<tabla>_<ref>`, `uq_<tabla>_<col>`, `ck_<tabla>_<regla>`.  
-**Consistencia:** 100 % idéntico a [`02-modelo-logico-relacional.md`](./02-modelo-logico-relacional.md) y [`schema_gin.sql`](./schema_gin.sql) (10 tablas, 67 columnas).
+**Consistencia:** 100 % idéntico a [`02-modelo-logico-relacional.md`](./02-modelo-logico-relacional.md) y [`schema_gin.sql`](./schema_gin.sql) (10 tablas, **74 columnas** verificadas mediante paridad automatizada contra `PRAGMA table_info` en SQLite 3.45.3).
 
 ---
 

@@ -11,9 +11,9 @@
 
 - **Tablas creadas:** **10 / 10 (100 %)** idénticas al modelo lógico (`B2`) y diccionario de datos (`B4`).
 - **Llaves primarias (`PRIMARY KEY`):** 8 simples + 2 compuestas (`lote(id_producto, numero_lote)` y `detalle_venta(id_venta, id_producto)`).
-- **Llaves foráneas (`FOREIGN KEY`) con acción referencial explícita:** **15 FK** (mínimo exigido: 3), combinando `ON DELETE RESTRICT` (protege historial de ventas/tiendas/usuarios), `ON DELETE CASCADE` (composición `venta`→`detalle_venta` y entidad débil `producto`→`lote`) y `ON DELETE SET NULL` (agregación opcional `categoria`→`producto` y `cierre_caja`→`venta`).
-- **Restricciones `UNIQUE`:** 4 (`rol.codigo_rol`, `usuario.correo`, `categoria(id_tienda, nombre)`, `producto(id_tienda, codigo_barras)`, además de `cierre_caja(id_tienda, fecha_cierre)`).
-- **Restricciones `CHECK`:** **20 `CHECK`** (mínimo exigido: 3) protegiendo precios `> 0`, stocks `>= 0`, `monto_recibido >= total`, `fecha_vencimiento >= fecha_ingreso` y dominios cerrados.
+- **Llaves foráneas (`FOREIGN KEY`) con acción referencial explícita:** **16 FK** con `ON DELETE` (mínimo exigido: 3), combinando `ON DELETE RESTRICT` (protege historial de ventas/tiendas/usuarios), `ON DELETE CASCADE` (composición `venta`→`detalle_venta` y entidad débil `producto`→`lote`) y `ON DELETE SET NULL` (agregación opcional `categoria`→`producto` y `cierre_caja`→`venta`).
+- **Restricciones `UNIQUE`:** **5 `UNIQUE`** (`rol.codigo_rol`, `usuario.correo`, `categoria(id_tienda, nombre)`, `producto(id_tienda, codigo_barras)` y `cierre_caja(id_tienda, fecha_cierre)`).
+- **Restricciones `CHECK`:** **25 `CHECK`** (mínimo exigido: 3) protegiendo precios `> 0`, stocks `>= 0`, `monto_recibido >= total`, `fecha_vencimiento >= fecha_ingreso` y dominios cerrados.
 - **Índices de rendimiento (`RNF-01`, `RNF-05`):** 4 índices compuestos/búsqueda sobre `producto`, `venta`, `lote` y `alerta_inventario`.
 
 ---
