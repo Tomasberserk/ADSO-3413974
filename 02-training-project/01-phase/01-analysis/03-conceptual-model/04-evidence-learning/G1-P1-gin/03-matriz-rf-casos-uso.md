@@ -57,3 +57,12 @@ Los siguientes requisitos **NO** generan casos de uso propios porque describen c
 - **Imagen exportada:** [`04-diagrama-casos-uso.png`](./04-diagrama-casos-uso.png)
 
 ![Diagrama de Casos de Uso UML — Gestión Neiva (GIN)](./04-diagrama-casos-uso.png)
+
+---
+
+## 5. Verificación de Criterios de Arbitraje UML (Revisión Día 2 — `2026-11-27`)
+
+- **Cobertura funcional:** 10 / 10 RF cubiertos (100 %, mínimo 90 %); 0 RNF modelados como casos de uso.
+- **Sin fragmentación CRUD:** `CU-02` y `CU-03` agrupan las operaciones de mantenimiento en un solo objetivo de actor.
+- **Dirección de relaciones verificada:** `«include»` apunta de Base → Incluido (`CU-06 → CU-07`); `«extend»` apunta de Extensión → Base (`CU-04 → CU-06`, `CU-08 → CU-07`, `CU-09 → CU-02`).
+- **Iniciador en proceso automático:** `CU-08` cuenta con el actor iniciador `Temporizador Diario` fuera de la frontera del sistema.
