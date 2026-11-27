@@ -3,7 +3,8 @@
 **Producto:** G2-P1 · Artefactos de diseño  
 **Autor (GitHub):** `@Tomasberserk`  
 **Caso de estudio:** Gestión Neiva (`GIN`) / TiendApp — Sistema de Inventario Inteligente y Punto de Venta (POS)  
-**Insumo de análisis:** [`02-training-project/01-phase/01-analysis/03-conceptual-model/04-evidence-learning/G1-P1-gin/00-insumo-srs-gin.md`](../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P1-gin/00-insumo-srs-gin.md) y [`G1-P2-gin/07-informe-analisis-y-trazabilidad.md`](../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P2-gin/07-informe-analisis-y-trazabilidad.md)
+**Insumo de análisis:** [`02-training-project/01-phase/01-analysis/03-conceptual-model/04-evidence-learning/G1-P1-gin/00-insumo-srs-gin.md`](../../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P1-gin/00-insumo-srs-gin.md) y [`G1-P2-gin/07-informe-analisis-y-trazabilidad.md`](../../../../01-analysis/03-conceptual-model/04-evidence-learning/G1-P2-gin/07-informe-analisis-y-trazabilidad.md)  
+**Repositorio técnico de implementación del proyecto:** https://github.com/Tomasberserk/GESTION_INVENTARIO_INTELIGENTE *(coherente con el stack Python / FastAPI / base de datos relacional)*
 
 ---
 

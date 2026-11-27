@@ -35,3 +35,5 @@
 | Clases e interfaces de `A2` (`Tienda`, `Usuario`, `Tendero`, `Cajero`, `Categoria`, `Producto`, `Lote`, `Venta`, `LineaVenta`, `IEstrategiaPago`, `PagoEfectivo`, `PagoTransferencia`, `AlertaInventario`, `CierreCaja`, `FachadaPOS`) | **15** | **15** | **0** | **Cumple (100 %)** |
 | Tablas lógicas de `B2` (`tienda`, `rol`, `usuario`, `categoria`, `producto`, `lote`, `cierre_caja`, `venta`, `detalle_venta`, `alerta_inventario`) | **10** | **10** | **0** | **Cumple (100 %)** |
 | Componentes de `A5` | **6** | **6** | **0** | **Cumple (100 %)** |
+
+*(Auditoría cruzada Día 2 — `2026-11-27`: verificado 100 % de alineación entre las 15 clases/interfaz de `G2-P1-gin`, las 10 tablas / 74 columnas de `G2-P2-gin` y los 10 RF + 5 RNF de `G1`, sin ciclos ni saltos de capa.)*
