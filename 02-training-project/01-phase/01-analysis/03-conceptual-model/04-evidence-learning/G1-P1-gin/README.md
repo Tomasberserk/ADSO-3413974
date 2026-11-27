@@ -19,7 +19,7 @@ Fecha límite: **sábado 28 de noviembre de 2026 a las 6:00 a. m.**
 | Artefacto | Ruta original en mi fork (semana) | ¿Lo hice solo o en equipo? |
 |---|---|---|
 | SRS módulo de inventario (`RF-01` a `RF-06`, `RNF-01` a `RNF-05`, `HU-01` a `HU-04`) | [`03-execute/04-week/02-optional-activity/SRS_TiendApp_v3.xlsx`](../../../../../../03-execute/04-week/02-optional-activity/SRS_TiendApp_v3.xlsx) *(Semana 04)* | En equipo |
-| Instrumentos de recolección y encuesta de validación con tenderos | [`03-execute/08-week/02-optional-activity/TiendApp_Encuesta_Validacion (1).docx`](../../../../../../03-execute/08-week/02-optional-activity/TiendApp_Encuesta_Validacion%20(1).docx) *(Semana 08)* | En equipo |
+| Instrumentos de recolección y encuesta de validación con tenderos | [`03-execute/08-week/02-optional-activity/TiendApp_Encuesta_Validacion (1).docx`](../../../../../../03-execute/08-week/02-optional-activity/TiendApp_Encuesta_Validacion%20%281%29.docx) *(Semana 08)* | En equipo |
 | Síntesis SRS TiendApp v1.2 (`RF-01`–`RF-06`, `RNF-01`–`RNF-05`, escáner EAN/UPC, `10 000` productos) | [`03-execute/11-week/02-optional-activity/TiendApp.docx`](../../../../../../03-execute/11-week/02-optional-activity/TiendApp.docx) *(Semana 11)* | En equipo |
 | Normativa y alcance del proyecto (problema, objetivos, alcance POS, alertas de vencimiento y cierre diario) | [`03-execute/14-week/02-optional-activity/Normativa_Proyecto_Inventario_Inteligente.docx`](../../../../../../03-execute/14-week/02-optional-activity/Normativa_Proyecto_Inventario_Inteligente.docx) *(Semana 14)* | Solo |
 
