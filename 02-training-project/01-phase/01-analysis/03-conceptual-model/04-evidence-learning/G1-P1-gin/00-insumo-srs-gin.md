@@ -4,6 +4,8 @@
 **Caso de estudio:** Gestión Neiva (`GIN`) — TiendApp (Sistema de Inventario Inteligente y Punto de Venta para Tiendas de Barrio)  
 **Fuentes reutilizadas en este fork:**
 - `03-execute/04-week/02-optional-activity/SRS_TiendApp_v3.xlsx` (`RF-01` a `RF-06`, `RNF-01` a `RNF-05`, `HU-01` a `HU-04`, entidad `Producto`).
+- `03-execute/06-week/02-optional-activity/TiendApp_Instrumentos_Fase1.docx` y `03-execute/08-week/02-optional-activity/TiendApp_Encuesta_Validacion (1).docx` (entrevista y encuesta de validación de requisitos con tenderos de barrio).
+- `03-execute/11-week/02-optional-activity/TiendApp.docx` (síntesis SRS TiendApp v1.2 confirmando `RF-01`–`RF-06`, `RNF-01`–`RNF-05` y soporte `EAN-13/EAN-8/UPC-A` hasta `10 000` productos).
 - `03-execute/14-week/02-optional-activity/Normativa_Proyecto_Inventario_Inteligente.docx` (ampliación de alcance: POS rápido, lotes/vencimientos a 15 días, control de roles multi-tienda y cierre diario de caja → `RF-07` a `RF-10`).
 - `03-execute/14-week/02-optional-activity/Mockup_Sencillo_Inventario_Inteligente.pdf` (4 pantallas iniciales en Figma).
 
