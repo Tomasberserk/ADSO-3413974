@@ -48,3 +48,9 @@
 - `Lote` **0..1** — origina — **0..\*** `AlertaInventario`
 - `Tienda` **1** — consolida — **0..\*** `CierreCaja`
 - `CierreCaja` **0..1** — resume — **0..\*** `Venta`
+
+---
+
+## 4. Contraste de Coherencia con Plantillas Extendidas y MER (Revisión Día 2 — `2026-11-27`)
+- Todo concepto mencionado en las plantillas extendidas (`CU-06`, `CU-02`, `CU-08`) existe como clase conceptual en este modelo (`Tienda`, `Usuario`, `Tendero`, `Cajero`, `Categoria`, `Producto`, `Lote`, `Venta`, `LineaVenta`, `AlertaInventario`).
+- Ninguna clase conceptual incluye métodos ni llaves foráneas, preservando la frontera metodológica entre el Modelo de Dominio y el MER ([`04-modelo-entidad-relacion.md`](./04-modelo-entidad-relacion.md)).
