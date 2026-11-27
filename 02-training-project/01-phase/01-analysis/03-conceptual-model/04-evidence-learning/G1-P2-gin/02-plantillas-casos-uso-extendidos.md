@@ -2,7 +2,7 @@
 
 **Producto:** G1-P2 · Modelo de análisis y verificación  
 **Autor (GitHub):** `@Tomasberserk`  
-**Nota metodológica:** Todas las plantillas expresan únicamente la intención del negocio y la interacción actor–sistema, sin detalles de implementación técnica (sin mención de SQL, tablas, endpoints ni librerías).
+**Nota metodológica:** Todas las plantillas expresan únicamente la intención del negocio y la interacción actor–sistema, sin detalles de implementación técnica (sin mención de lenguaje de consultas, tablas físicas, endpoints ni librerías). Cada flujo alterno y excepción coincide 1 a 1 con las guardas `[...]` de los diagramas de actividades [`01-actividad-cu06-venta-pos.png`](./01-actividad-cu06-venta-pos.png) y [`01-actividad-cu02-gestionar-productos.png`](./01-actividad-cu02-gestionar-productos.png) *(verificado en Revisión Día 2 — `2026-11-27`)*.
 
 ---
 
