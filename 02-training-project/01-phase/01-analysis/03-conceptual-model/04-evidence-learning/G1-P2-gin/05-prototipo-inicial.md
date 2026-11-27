@@ -2,7 +2,7 @@
 
 **Producto:** G1-P2 · Modelo de análisis y verificación  
 **Autor (GitHub):** `@Tomasberserk`  
-**Origen reutilizado:** Reutilizado y rotulado desde [`03-execute/14-week/02-optional-activity/Mockup_Sencillo_Inventario_Inteligente.pdf`](../../../../../03-execute/14-week/02-optional-activity/Mockup_Sencillo_Inventario_Inteligente.pdf) (diseñado en Figma como wireframe de baja fidelidad).
+**Origen reutilizado:** Reutilizado y rotulado desde [`03-execute/14-week/02-optional-activity/Mockup_Sencillo_Inventario_Inteligente.pdf`](../../../../../../03-execute/14-week/02-optional-activity/Mockup_Sencillo_Inventario_Inteligente.pdf) (diseñado en Figma como wireframe de baja fidelidad: https://www.figma.com/design/EcS3ZTPM9bbIsmOtxIaBHa).
 
 ---
 
